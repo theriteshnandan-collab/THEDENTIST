@@ -4,6 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/THEDENTIST/',
+  base: process.env.GITHUB_ACTIONS ? '/THEDENTIST/' : '/',
   plugins: [react(), tailwindcss()],
 })
